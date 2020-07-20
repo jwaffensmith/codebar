@@ -61,9 +61,9 @@ workshop.print_details()
 
 ## Bonus I
 
-The `print_details` method currently does a number of different things, like printing out workshop details, the list of Students and the list of Coaches.
+The `print_details` method currently does a number of different things, like printing out workshop details, the list of Students and the list of Instructors.
 
-Create separate methods to print the workshop details (date and classroom), a method to print out the students and one to print out the coaches. Call these from `print_details` instead of having all the code there.
+Create separate methods to print the workshop details (date and subject), a method to print out the students and one to print out the instructors. Call these from `print_details` instead of having all the code there.
 
 
 > Hint: look into defining private class methods.
