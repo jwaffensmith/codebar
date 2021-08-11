@@ -2,21 +2,30 @@
 
 # Super Class 
 class Member:
-    def __init__(self, member_name):
-        self.full_name = member_name
+    def __init__(self, full_name):
+        self.name = full_name
     
     def introduce(self):
-        print(f"Hi, my name is {self.full_name}!")
+        print(f"Hi, my name is {self.name}!")
 
-jenna = Member("Jenna Waffensmith")
-print(jenna)
+# Student Sub Class
+class Student(Member):
+    def __init__(self, full_name, attendance_reason):
+        super().__init__(full_name)
+        self.reason = attendance_reason
+
+    def state_reason(self):
+        print(self.reason)
 
 
-#Sub Class
-#class Student(Member):
+jenna = Student("Jenna Waffensmith", "I love to code!")
 
-#Sub Class
+
+# Instructor Sub Class
 #class Instructor(Member):
+
+
+
 
 #PART 2
 #Workshops
