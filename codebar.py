@@ -6,26 +6,31 @@ class Member:
         self.name = full_name
     
     def introduce(self):
-        print(f"Hi, my name is {self.name}!")
+        return f"Hi, my name is {self.name}!"
 
 # Student Sub Class
 class Student(Member):
-    def __init__(self, full_name, attendance_reason):
+    def __init__(self, full_name, reason):
         super().__init__(full_name)
-        self.reason = attendance_reason
+        self.reason = reason
 
     def state_reason(self):
-        print(self.reason)
+        return self.reason
+
+# Instructor Sub Class
+class Instructor(Member):
+    def __init__(self, full_name, bio, skills:list):
+        super().__init__(full_name)
+        self.bio = bio
+        self.skills = skills
+    
+    def add_skill(self, add_skill):
+        self.add_skill = add_skill 
+        self.skills.append(self.add_skill)
 
 
 jenna = Student("Jenna Waffensmith", "I love to code!")
-
-
-# Instructor Sub Class
-#class Instructor(Member):
-
-
-
+ali = Instructor("Ali Schaffer",  "I've been coding in Python for 5 years and want to share the love!", ["Python", "Javascript", "C++"])
 
 #PART 2
 #Workshops
